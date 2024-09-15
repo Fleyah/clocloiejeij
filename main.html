@@ -1422,7 +1422,19 @@ input[type="text"] {
         displayResults(students);  // Rafraîchir les résultats
         document.getElementById('edit-container').style.display = 'none';  // Cacher le formulaire d'édition
     }
+
+    document.addEventListener('keydown', function(event) {
+    // Vérifie si la touche "Enter" est pressée
+    if (event.key === 'Enter') {
+        // Ferme le menu d'écriture (exemple en changeant la visibilité)
+        let menu = document.getElementById('search-bar'); // L'ID de ton menu
+        if (menu) {
+            menu.style.display = 'none'; // Cache le menu
+        }
+    }
+});
 </script>
+
 
 </body>
 </html>
